@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom'; // Import Link
 import { FaTelegramPlane } from 'react-icons/fa';
 import './App.css';
+import { formatDateTime } from './utilityFunctions'; 
 
 const colorOptions = [
     'lightblue', '#2F539B', '#00827F', '#348781', '#006A4E',
@@ -68,20 +69,7 @@ function WeatherApp() {
         fetchDataAndGenerateCards();
     }, []);
 
-    function formatDateTime(timestamp) {
-        const date = new Date(timestamp * 1000); // Convert timestamp to milliseconds
-        const hours = date.getHours() % 12 || 12; // Get hours in 12-hour format
-        const minutes = date.getMinutes();
-        const period = date.getHours() < 12 ? 'a.m.' : 'p.m.'; // Determine if it's a.m. or p.m.
-
-        // Get month abbreviation (e.g., Jan, Feb, etc.)
-        const monthAbbreviation = new Intl.DateTimeFormat('en-US', { month: 'short' }).format(date);
-
-        // Get day in two-digit format (e.g., '08')
-        const day = String(date.getDate()).padStart(2, '0');
-
-        return `${hours}.${minutes}${period},${monthAbbreviation}${day}`;
-    }
+    
 
     return (
         <div className="App">
