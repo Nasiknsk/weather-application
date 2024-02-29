@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './styles/style.css';
 import WeatherApp from './components/Weather/Weather';
 import SingleCard from './components/Weather/SingleCard';
 import { Routes, Route, Navigate } from 'react-router-dom';
