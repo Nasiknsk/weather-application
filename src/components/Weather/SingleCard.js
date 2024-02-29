@@ -21,7 +21,7 @@ function SingleCard() {
                 setWeatherData(data);
             } catch (error) {
                 console.error('Error fetching weather data:', error);
-                // Handle error (e.g., show error message)
+                
             }
         };
 

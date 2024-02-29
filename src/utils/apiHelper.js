@@ -1,10 +1,10 @@
 import { colorOptions } from './constants';
-import citiesData from './cities.json';
+
 
 export const fetchWeatherData = async () => {
     try {
         //fetch datas from cities.json
-        const citiesResponse = await fetch('/cities.json');
+        const citiesResponse = await fetch('/include/cities.json');
         if (!citiesResponse.ok) {
             throw new Error('Failed to fetch city data');
         }

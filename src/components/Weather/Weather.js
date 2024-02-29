@@ -1,4 +1,3 @@
-// Weather.js
 
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -6,9 +5,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import WeatherCard from './WeatherCard'; // Import WeatherCard component
 import { fetchWeatherData } from '../../utils/apiHelper'; // Import fetchWeatherData function
-// import { colorOptions } from '../../utils/constants'; // Import colorOptions constant
-// import { formatDateTime } from '../../utils/utilityFunctions'; // Import formatDateTime function
-// import logo from '../../assets/images/logo.png';
 import  Header  from './../common/Header';
 import  Footer  from './../common/Footer';
 
