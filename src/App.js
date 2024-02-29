@@ -1,8 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import WeatherApp from './Weather';
-import SingleCard from './SingleCard';
+import WeatherApp from './components/Weather/Weather';
+import SingleCard from './components/Weather/SingleCard';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<WeatherApp />} />
         {/* Define a route for SingleCard with a dynamic CityCode parameter */}
-        <Route path="/SingleCard/:CityCode" element={<SingleCard />} />
+        <Route path="/SingleCard/:CityCode/:index" element={<SingleCard />} />
         {/* Redirect to WeatherApp for unknown routes */}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>

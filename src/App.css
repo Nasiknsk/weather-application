@@ -10,7 +10,7 @@
 
 body {
   background-color: black;
-  background-image: url("bgs.png");
+  background-image: url("./assets/images/bgs.png");
  
 }
 background-image{
@@ -105,4 +105,54 @@ input[type="text"] {
 .link-style:hover {
   color: rgb(15, 15, 16); /* Change text color on hover */
 }
+/* Add these styles to your CSS file */
+.top-section {
+  border-radius: 5px;
+  padding: 20px; /* Add padding as needed */
+}
 
+.color-0 {
+  background-color: lightblue;
+}
+
+.color-1 {
+  background-color: #2F539B;
+}
+
+.color-2 {
+  background-color: #00827F;
+}
+
+.color-3 {
+  background-color: #348781;
+}
+
+.color-4 {
+  background-color: #006A4E;
+}
+
+.color-5 {
+  background-color: #99C68E;
+}
+
+.color-6 {
+  background-color: lightseagreen;
+}
+
+.color-7 {
+  background-color: #77DD77;
+}
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Optional: Centers content vertically */
+}
+
+.custom-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: none;
+  border: none;
+}
