@@ -1,7 +1,7 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { FaTelegramPlane } from 'react-icons/fa';
-import { formatDateTime } from '../../utils/utilityFunctions';
+import { formatDateTime,formatTime } from '../../utils/utilityFunctions';
 
 
 function WeatherCard({ details, colorIndex }) {
@@ -33,8 +33,8 @@ function WeatherCard({ details, colorIndex }) {
                         <p>{details.WindSpeed} m/s{details.WindDirection}°</p>
                     </Col>
                     <Col xs={4} md={4}>
-                        <p>Sunrise: {new Date(details.Sunrise * 1000).toLocaleTimeString()}</p>
-                        <p>Sunset: {new Date(details.Sunset * 1000).toLocaleTimeString()}</p>
+                        <p>Sunrise: {formatTime(details.Sunrise)}</p>
+                        <p>Sunset: {formatTime(details.Sunset)}</p>
                     </Col>
                 </Row>
             </div>

@@ -18,8 +18,11 @@ export const formatTime = (timestamp) => {
     if (!timestamp) {
         return ''; // Handle null or undefined timestamp
     }
-    const date = new Date(timestamp * 1000);
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
-    return `${hours}:${minutes}`;
+    //console.log(timestamp);
+    const date = new Date(timestamp);
+    const formattedTime = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+    return formattedTime;
 };
+
+
+

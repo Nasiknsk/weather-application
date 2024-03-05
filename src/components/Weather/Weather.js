@@ -1,14 +1,11 @@
-
 import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import WeatherCard from './WeatherCard'; // Import WeatherCard component
 import { fetchWeatherData } from '../../utils/apiHelper'; // Import fetchWeatherData function
-import  Header  from './../common/Header';
-import  Footer  from './../common/Footer';
-
-
+import Header from './../common/Header';
+import Footer from './../common/Footer';
 
 function Weather() {
     const [weatherData, setWeatherData] = useState([]);
@@ -28,9 +25,9 @@ function Weather() {
 
     return (
         <>
-          <Header />
-          <br />
-            <div className="App">
+            <Header />
+            <br />
+            <div>
                 <Container>
                     <Row xs={1} md={2} lg={2} className="g-4" id="card-container">
                         {weatherData.map((details, index) => (
@@ -45,7 +42,6 @@ function Weather() {
                         ))}
                     </Row>
                 </Container>
-                
             </div>
             <Footer />
         </>

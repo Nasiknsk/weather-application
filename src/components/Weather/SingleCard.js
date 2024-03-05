@@ -38,14 +38,14 @@ function SingleCard() {
             return <div>City data not found...</div>;
         }
 
-        const colorIndex = cityWeather.colorIndex % colorOptions.length;
+        //const colorIndex = cityWeather.colorIndex % colorOptions.length;
 
         return (
             <>
                 <Header />
                 <br />
                 <Container>
-                    <Row className="justify-content-center">
+                    <Row>
                         <Col xs={12} md={6}>
                             <div className="card">
                                 <div className={`top-section color-${index}`}>
