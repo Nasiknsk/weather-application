@@ -11,3 +11,6 @@ export const LOCAL_STORAGE_WEATHER_DATA_KEY = 'weatherData';
 export const LOCAL_STORAGE_TIMESTAMP_KEY = 'weatherDataTimestamp';
 
 export const API_URL = 'https://api.openweathermap.org/data/2.5/group';
+
+
+

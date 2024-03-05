@@ -1,4 +1,5 @@
-import { colorOptions,LOCAL_STORAGE_TIMESTAMP_KEY,LOCAL_STORAGE_WEATHER_DATA_KEY,CITY_JSON_URL,API_URL } from './constants';
+import { colorOptions, LOCAL_STORAGE_TIMESTAMP_KEY, LOCAL_STORAGE_WEATHER_DATA_KEY, CITY_JSON_URL, API_URL } from './constants';
+import {isCacheValid} from './utilityFunctions';
 
 export const fetchWeatherData = async () => {
     try {
@@ -6,12 +7,9 @@ export const fetchWeatherData = async () => {
         const cachedTimestamp = parseInt(localStorage.getItem(LOCAL_STORAGE_TIMESTAMP_KEY), 10);
         const formattedTime = new Date(cachedTimestamp);
 
-        const timeDifferenceMs = Date.now() - formattedTime.getTime();
-        const timeDifferenceMinutes = Math.floor(timeDifferenceMs / (1000 * 60));
-
-        if (cachedData && cachedTimestamp && timeDifferenceMinutes < 5) {
+        if (isCacheValid(cachedData, cachedTimestamp)) {
             console.log("Using cached data");
-            const cityDetails = cachedData.map(cityData => transformCityData(cityData, cachedData.indexOf(cityData)));
+            const cityDetails = cachedData.map((cityData, index) => transformCityData(cityData, index));
             return cityDetails;
         } else {
             console.log("No cached data available or data expired.");
@@ -66,6 +64,8 @@ const transformCityData = (cityData, index) => ({
     WindDirection: cityData.wind.deg,
     colorIndex: index % colorOptions.length
 });
+
+
 
 export default {
     fetchWeatherData,

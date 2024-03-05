@@ -23,6 +23,12 @@ export const formatTime = (timestamp) => {
     const formattedTime = date.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
     return formattedTime;
 };
+export const isCacheValid = (cachedData, cachedTimestamp) => {
+    const timeDifferenceMs = Date.now() - new Date(cachedTimestamp).getTime();
+    const timeDifferenceMinutes = Math.floor(timeDifferenceMs / (1000 * 60));
+    return cachedData && cachedTimestamp && timeDifferenceMinutes < 5;
+};
+
 
 
 
