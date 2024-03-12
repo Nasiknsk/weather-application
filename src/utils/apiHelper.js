@@ -5,7 +5,7 @@ export const fetchWeatherData = async () => {
     try {
         const cachedData = JSON.parse(localStorage.getItem(LOCAL_STORAGE_WEATHER_DATA_KEY));
         const cachedTimestamp = parseInt(localStorage.getItem(LOCAL_STORAGE_TIMESTAMP_KEY), 10);
-        const formattedTime = new Date(cachedTimestamp);
+       
 
         if (isCacheValid(cachedData, cachedTimestamp)) {
             console.log("Using cached data");

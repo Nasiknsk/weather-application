@@ -29,7 +29,7 @@ function Weather() {
             <br />
             <div>
                 <Container>
-                    <Row xs={1} md={2} lg={2} className="g-4" id="card-container">
+                    <Row xs={12} md={6} lg={6} className="g-4" id="card-container">
                         {weatherData.map((details, index) => (
                             <Col key={index} className="mb-4" lg={6}>
                                 <Link

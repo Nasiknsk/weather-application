@@ -3,10 +3,7 @@
   margin: 10px;
   text-align: center; 
 }
-.buttons{
-  text-align: left;
-  border: none;
-}
+
 
 body {
   background-color: black;
@@ -14,7 +11,7 @@ body {
   background-size: cover; /* Ensure the background image covers the entire screen */
   background-position: center; /* Center the background image */
   background-repeat: no-repeat; /* Prevent the background image from repeating */
-  height: 100%; /* Ensure the body takes up the entire viewport height */
+
 }
 
 background-image{
@@ -73,11 +70,6 @@ background-image{
   align-items: center;
 }
 
-.col {
-  flex: 1;
-  text-align: center;
-  justify-content: center;
-}
 
 img {
   max-width: 100%;
@@ -85,36 +77,12 @@ img {
 }
 
 
-input[type="text"] {
-  background-color: blue;
-  color: white; /* optional: change text color to white */
-  padding: 10px; /* optional: add padding for better appearance */
-  border: none; /* optional: remove default border */
-  height:30px;
-}
-.card-link {
-  color: white;
-  text-decoration: none; /* Remove underlines */
-}
-.vertical-line {
-  border-left: 3px solid rgb(16, 17, 16);
-  height: 100px;
-  position: absolute;
-  left: 50%;
-  margin-left: -50px;
-  top:145px;
-}
 .link-style {
   text-decoration: none; /* Remove underline */
   color: #000; /* Change text color */
 }
 
-.link-style:hover {
-  color: rgb(15, 15, 16); /* Change text color on hover */
-}
-/* Add these styles to your CSS file */
 .top-section {
-  border-radius: 5px;
   padding: 20px; /* Add padding as needed */
 }
 
